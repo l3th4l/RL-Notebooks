@@ -44,7 +44,7 @@ def test():
     run = 0
     while True:
         run += 1
-        dqn_solver.model.load_weights('dqn_weights_%i.h5' % (run))
+        dqn_solver.model.load_weights('../weights/dqn_weights_%i.h5' % (run))
         state = env.reset()
         state = np.reshape(state, [1, observation_space])
         step = 0
